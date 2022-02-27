@@ -43,10 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const letterId = firstLetterId + index;
                 const letterEl = document.getElementById(letterId)
-                letterEl.classList.add("animate_flipInX");
+                letterEl.classList.add("animate__flipInX");
                 letterEl.style = `background-color:${tileColor}; border-color:${tileColor}`
 
-            }, interval);
+            }, interval * index);
         })
 
         guessedWordCount += 1;
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let i = 0; i < 30; i++){
             let square = document.createElement("div");
             square.classList.add("square");
-            square.classList.add("animate_animated");
+            square.classList.add("animate__animated");
             square.setAttribute("id", i + 1)
             gameBoard.appendChild(square);
         }
