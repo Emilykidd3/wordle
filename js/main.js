@@ -1,13 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
     createSquares();
+    getNewWord();
 
     let guessedWords = [[]]
     let availableSpace = 1;
 
-    let word = "dairy"
+    let word;
     let guessedWordCount = 0;
 
     const keys = document.querySelectorAll('.keyboard-row button')
+
+    function getNewWord() {
+        // make function that get a random 5 letter word
+        word = "dairy"
+        return "dairy"
+
+    }
 
     function getCurrentWordArr() {
         const numberOfGuessedWords = guessedWords.length;
