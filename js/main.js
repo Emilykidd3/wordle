@@ -1,11 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
     createSquares();
+    let word;
     getNewWord();
+
+    const wordsArr = ["abuse", "adult", "agent"]
 
     let guessedWords = [[]]
     let availableSpace = 1;
 
-    let word;
+    // let word;
     let guessedWordCount = 0;
 
     const keys = document.querySelectorAll('.keyboard-row button')
@@ -14,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // make function that get a random 5 letter word
         word = "dairy"
         return "dairy"
-
     }
 
     function getCurrentWordArr() {
@@ -39,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const isCorrectLetter = word.includes(letter)
 
         if (!isCorrectLetter) {
-            return "rgb(58, 58, 60"
+            return "rgb(58, 58, 60)"
         }
 
         const letterInThatPosition = word.charAt(index);
@@ -60,31 +62,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const currentWord = currentWordArr.join('');
 
-        const firstLetterId = guessedWordCount * 5 + 1;
-        const interval = 200;
-        currentWordArr.forEach((letter, index) => {
-            setTimeout(() => {
-                const tileColor = getTileColor(letter, index);
-
-                const letterId = firstLetterId + index;
-                const letterEl = document.getElementById(letterId)
-                letterEl.classList.add("animate__flipInX");
-                letterEl.style = `background-color:${tileColor}; border-color:${tileColor}`
-
-            }, interval * index);
-        })
-
-        guessedWordCount += 1;
-
-        if (currentWord === word) {
-            window.alert("Congratulations!")
+        if (wordsArr.includes(currentWord)){
+            const firstLetterId = guessedWordCount * 5 + 1;
+            const interval = 200;
+            currentWordArr.forEach((letter, index) => {
+                setTimeout(() => {
+                    const tileColor = getTileColor(letter, index);
+    
+                    const letterId = firstLetterId + index;
+                    const letterEl = document.getElementById(letterId)
+                    letterEl.classList.add("animate__flipInX");
+                    letterEl.style = `background-color:${tileColor}; border-color:${tileColor}`
+    
+                }, interval * index);
+            })
+    
+            guessedWordCount += 1;
+    
+            if (currentWord === word) {
+                window.alert("Congratulations!")
+            }
+    
+            if (guessedWords.length === 6) {
+                window.alert(`Sorry, you have no more guesses! the words is ${word}`)
+            }
+    
+            guessedWords.push([]);
+        } else {
+            window.alert("that's not a word!")
+            return;
         }
 
-        if (guessedWords.length === 6) {
-            window.alert(`Sorry, you have no more guesses! the words is ${word}`)
-        }
 
-        guessedWords.push([]);
     }
 
     function createSquares() {
