@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     createSquares();
     let word;
+    
+    const wordsArr = ["abuse", "adult", "agent", "anger", "apple", "artsy", "award", "basis", "beach", "birth", "block", "blood", "board", "brain", "bread", "break", "brown", "buyer", "cause", "chain", "chair", "chest", "chief", "child", "china", "claim", "class", "clock", "coach", "coach", "coast", "court", "cover", "crash", "cream", "crime", "cross", "crowd", "crown", "cycle", "dance", "death", "depth", "doubt", "draft", "drama", "dream", "dress", "drink", "drive", "earth", "enemy", "entry", "error", "event", "faith", "fault", "field", "fight", "final", "floor", "focus"]; 
+    
     getNewWord();
-
-    const wordsArr = ["abuse", "adult", "agent"]
 
     let guessedWords = [[]]
     let availableSpace = 1;
@@ -14,9 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const keys = document.querySelectorAll('.keyboard-row button')
 
     function getNewWord() {
-        // make function that get a random 5 letter word
-        word = "dairy"
-        return "dairy"
+        let randomNumer = Math.floor(Math.random() * wordsArr.length);
+        word = wordsArr[randomNumer];
+        console.log(word);
+        return wordsArr[randomNumer];
     }
 
     function getCurrentWordArr() {
