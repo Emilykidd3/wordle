@@ -104,3 +104,13 @@ header {
 .spacer-half {
   flex-grow: 0.5;
 }
+
+.link {
+  text-decoration: none;
+  color: gainsboro;
+  font-size: 1rem;
+  font-weight: lighter;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
