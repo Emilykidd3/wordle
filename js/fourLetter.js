@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function createSquares() {
-        const gameBoard = document.getElementById("board")
+        const gameBoard = document.getElementById("four-board")
 
         for (let i = 0; i < 20; i++){
             let square = document.createElement("div");

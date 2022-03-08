@@ -55,6 +55,14 @@ header {
   box-sizing: border-box;
 }
 
+#four-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
 .square {
   border: 2px solid rgb(58, 58, 60);
   min-width: 60px;
