@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     createSquares();
     let word;
     
-    const wordsArr = []; 
+    const wordsArr = ["abroad", "across", "active", "advise", "afraid", "almost", "animal", "anyone", "appear", "artist", "assist", "attent", "avenue"]; 
     
     getNewWord();
 
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function createSquares() {
-        const gameBoard = document.getElementById("board")
+        const gameBoard = document.getElementById("six-board")
 
         for (let i = 0; i < 42; i++){
             let square = document.createElement("div");
