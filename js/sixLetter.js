@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateGuessedWords(letter){
         const currentWordArr = getCurrentWordArr();
 
-        if (currentWordArr && currentWordArr.length < 5) {
+        if (currentWordArr && currentWordArr.length < 6) {
             currentWordArr.push(letter)
 
             const availableSpaceEl = document.getElementById(String(availableSpace))
@@ -58,14 +58,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function handleSubmitWord() {
         const currentWordArr = getCurrentWordArr();
-        if (currentWordArr.length !== 5) {
-            window.alert("word must be 5 letters");
+        if (currentWordArr.length !== 6) {
+            window.alert("word must be 6 letters");
         }
 
         const currentWord = currentWordArr.join('');
 
         if (wordsArr.includes(currentWord)){
-            const firstLetterId = guessedWordCount * 5 + 1;
+            const firstLetterId = guessedWordCount * 6 + 1;
             const interval = 200;
             currentWordArr.forEach((letter, index) => {
                 setTimeout(() => {
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function createSquares() {
         const gameBoard = document.getElementById("board")
 
-        for (let i = 0; i < 30; i++){
+        for (let i = 0; i < 42; i++){
             let square = document.createElement("div");
             square.classList.add("square");
             square.classList.add("animate__animated");
