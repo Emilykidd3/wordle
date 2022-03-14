@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     createSquares();
     let word;
     
-    const wordsArr = ["abroad", "across", "active", "advise", "afraid", "almost", "animal", "anyone", "appear", "artist", "assist", "attent", "avenue"]; 
+    const wordsArr = ["abroad", "across", "active", "advise", "afraid", "almost", "animal", "anyone", "appear", "artist", "assist", "attent", "avenue", "barely", "beauty", "become", "behalf"]; 
     
     getNewWord();
 

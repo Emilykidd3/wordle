@@ -904,7 +904,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function createSquares() {
         const gameBoard = document.getElementById("four-board")
 
-        for (let i = 0; i < 20; i++){
+        for (let i = 0; i < 24; i++){
             let square = document.createElement("div");
             square.classList.add("square");
             square.classList.add("animate__animated");
