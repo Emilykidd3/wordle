@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         for (let i = 0; i < 42; i++){
             let square = document.createElement("div");
-            square.classList.add("square");
+            square.classList.add("six-square");
             square.classList.add("animate__animated");
             square.setAttribute("id", i + 1)
             gameBoard.appendChild(square);
