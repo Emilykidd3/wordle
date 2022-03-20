@@ -548,7 +548,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // function to color keyboard based on user input
     function colorKeyboard(letter, color) {
-
+        for (const elem of document.getElementsByClassName("keyboard-button")) {
+            if (elem.textContent === letter) {
+                let oldColor = elem.style.backgroundColor
+                if (oldColor === 'green'){
+                    return
+                }
+                if (oldColor === 'yellow' && color !== 'green') {
+                    return
+                }
+                elem.style.backgroundColor = color
+                break
+            }
+        }
     }
 
     function getNewWord() {
@@ -577,9 +589,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function getTileColor(letter, index) {
+        let color;
         const isCorrectLetter = word.includes(letter)
 
         if (!isCorrectLetter) {
+            color === "gray";
             return "rgb(58, 58, 60)"
         }
 
@@ -587,9 +601,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const isCorrectPosition = letter === letterInThatPosition
 
         if (isCorrectPosition) {
+            color === "green";
             return "rgb(83, 141, 78)"
         }
 
+        color === "yellow";
+        // square.style.backgroundColor = color;
+        colorKeyboard(letter, color);
         return "rgb(181, 159, 59)"
     }
 
@@ -631,8 +649,6 @@ document.addEventListener("DOMContentLoaded", () => {
             window.alert("that's not a word!")
             return;
         }
-
-
     }
 
     function createSquares() {
