@@ -548,9 +548,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // function to color keyboard based on user input
     function colorKeyboard(letter, color) {
+        console.log("here")
         for (const elem of document.getElementsByClassName("keyboard-button")) {
             if (elem.textContent === letter) {
                 let oldColor = elem.style.backgroundColor
+                console.log(oldColor)
                 if (oldColor === 'green'){
                     return
                 }
