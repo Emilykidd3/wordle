@@ -481,10 +481,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function handleSubmitWord() {
         const currentWordArr = getCurrentWordArr();
         if (currentWordArr.length !== 4) {
-            // toast.error("word must be 4 letters");
-            Toastify({
-                text: "word must be 4 letters"
-            }).showToast();
+            window.alert("word must be 4 letters")
+            // Toastify({
+            //     text: "word must be 4 letters"
+            // }).showToast();
         }
 
         const currentWord = currentWordArr.join('');
