@@ -3,43 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     createSquares();
     let word;
     
-    const wordsArr = ['abet', 'abut', 'ache', 'alit', 'ante', 'arch', 'aver', 'avow', 'bach', 'back', 'bade', 'bail', 'bait', 'bake', 'bale', 'balk', 'ball', 'band', 'bang', 'bank', 'barb', 'bard', 'bare', 'barf', 'bark', 'base', 'bash', 'bask', 'bate', 'bawl', 'bead', 'beam', 'bean', 'bear', 'beat', 'beef', 'been', 'beep', 'bell', 'belt', 'bend', 'bent', 'bias', 'bide', 'biff', 'bike', 'bilk', 'bill', 'bind', 'bird', 'birl', 'birr', 'bite', 'bitt', 'blab', 'blat', 'bled', 'blew', 'blob', 'blot', 'blow', 'blub', 'blue', 'blur', 'boat', 'bode', 'body', 'boil', 'bolt', 'bomb', 'bond', 'bone', 'bong', 'bonk', 'book', 'boom', 'boot', 'bore', 'born', 'boss', 'bowl', 'brag', 'bray', 'bred', 'brew', 'brim', 'buck', 'buff', 'bulk', 'bull', 'bump', 'bung', 'bunk', 'bunt', 'buoy', 'burl', 'burn', 'burp', 'burr', 'bury', 'bush', 'busk', 'buss', 'bust', 'busy', 'butt', 'buzz', 'caca', 'cage', 'cake', 'calk', 'call', 'calm', 'came', 'camp', 'cane', 'cant', 'card', 'care', 'cart', 'case', 'cash', 'cast', 'cave', 'cede', 'cere', 'chap', 'char', 'chat', 'chaw', 'chid', 'chin', 'chip', 'chop', 'chug', 'chum', 'cite', 'clad', 'clam', 'clap', 'claw', 'clew', 'clip', 'clog', 'clop', 'clot', 'cloy', 'club', 'clue', 'coal', 'coat', 'coax', 'cock', 'code', 'coif', 'coil', 'coin', 'coke', 'comb', 'come', 'comp', 'cone', 'conk', 'cook', 'cool', 'coop', 'cope', 'copy', 'cord', 'core', 'cork', 'corn', 'cosh', 'cost', 'cowl', 'crab', 'cram', 'crap', 'crew', 'crib', 'crop', 'crow', 'cube', 'cuff', 'cull', 'curb', 'cure', 'curl', 'cuss', 'dado', 'damn', 'damp', 'dang', 'dare', 'darn', 'dart', 'dash', 'date', 'daub', 'dawn', 'daze', 'deal', 'deck', 'deed', 'deem', 'defy', 'deke', 'demo', 'dent', 'deny', 'dial', 'dice', 'died', 'diet', 'dike', 'dine', 'ding', 'disc', 'dish', 'disk', 'diss', 'dive', 'dock', 'doff', 'dole', 'done', 'doom', 'dope', 'doss', 'dote', 'dove', 'down', 'doze', 'drag', 'draw', 'drew', 'drip', 'drop', 'drub', 'drug', 'drum', 'duck', 'duel', 'dull', 'dump', 'dung', 'dunk', 'dupe', 'dusk', 'dust', 'earn', 'ease', 'echo', 'edge', 'edit', 'emit', 'envy', 'espy', 'etch', 'even', 'exit', 'face', 'fade', 'fail', 'fake', 'fall', 'fare', 'farm', 'fart', 'fast', 'fate', 'fawn', 'faze', 'fear', 'feed', 'feel', 'fell', 'felt', 'fend', 'fess', 'fete', 'feud', 'file', 'fill', 'film', 'find', 'fine', 'fink', 'fire', 'firm', 'fish', 'fist', 'fizz', 'flag', 'flap', 'flat', 'flaw', 'flay', 'fled', 'flee', 'flew', 'flex', 'flip', 'flit', 'flog', 'flop', 'flow', 'flub', 'flux', 'foal', 'foam', 'foil', 'fold', 'fond', 'fool', 'foot', 'ford', 'fork', 'form', 'foul', 'fowl', 'frag', 'frap', 'fray', 'free', 'fret', 'frit', 'fuel', 'full', 'fume', 'fund', 'funk', 'furl', 'fuse', 'fuss', 'futz', 'gain', 'gait', 'gall', 'game', 'gang', 'gaol', 'gape', 'garb', 'gash', 'gasp', 'gate', 'gave', 'gawk', 'gawp', 'gaze', 'gear', 'geld', 'gibe', 'gift', 'gild', 'gimp', 'gird', 'give', 'glom', 'glow', 'glue', 'glug', 'glut', 'gnaw', 'goad', 'golf', 'gone', 'gong', 'goof', 'gore', 'gown', 'grab', 'gray', 'grew','grey', 'grid', 'grin', 'grip', 'grit', 'grow', 'grub', 'gull', 'gulp', 'gush', 'gust', 'gybe', 'hack', 'hail', 'hale', 'halt', 'hand', 'hang', 'hare', 'hark', 'harm', 'harp', 'hash', 'hasp', 'hast', 'hate', 'hath', 'haul', 'have', 'hawk', 'haze', 'head', 'heal', 'heap', 'hear', 'heat', 'heed', 'heel', 'heft', 'held', 'helm', 'help', 'herd', 'hewn', 'hide', 'hike', 'hill', 'hint', 'hire', 'hiss', 'hive', 'hoax', 'hock', 'hold', 'hole', 'home', 'hone', 'honk', 'hood', 'hoof', 'hook', 'hoop', 'hoot', 'hope', 'horn', 'hose', 'host', 'hove', 'howl', 'huff', 'hulk', 'hull', 'hump', 'hung', 'hunt', 'hurl', 'hurt', 'hush', 'husk', 'hymn', 'hype', 'idle', 'inch', 'iron', 'itch', 'jack', 'jade', 'jail', 'jape', 'jazz', 'jeer', 'jell', 'jerk', 'jest', 'jibe', 'jilt', 'jinx', 'jive', 'join', 'joke', 'jolt', 'josh', 'juke', 'jump', 'junk', 'kayo', 'keel', 'keen', 'keep', 'kept', 'kern', 'kick', 'kill', 'kink', 'kiss', 'kite', 'knap', 'knew', 'knit', 'knot', 'know', 'lace', 'lack', 'laid', 'lain', 'lamb', 'lame', 'land', 'lard', 'lark', 'lash', 'last', 'laud', 'lave', 'laze', 'lead', 'leaf', 'leak', 'lean', 'leap', 'leer', 'left', 'lend', 'lent', 'levy', 'lick', 'lift', 'like', 'lilt', 'lime', 'limp', 'line', 'link', 'lisp', 'list', 'live', 'load', 'loaf', 'loan', 'lock', 'loft', 'loll', 'long', 'look', 'loom', 'loop', 'loot', 'lope', 'lord', 'lose', 'lost', 'lour', 'love', 'lube', 'luck', 'luff', 'luge', 'lull', 'lump', 'lure', 'lurk', 'lust', 'made', 'mail', 'maim', 'make', 'mark', 'mask', 'mate', 'maul', 'meet', 'meld', 'melt', 'mend', 'meow', 'mess', 'miff', 'milk', 'mime', 'mind', 'mine', 'miss', 'moan', 'mock', 'moor', 'moot', 'mope', 'move', 'muck', 'muff', 'muse', 'mush', 'must', 'mute', 'nail', 'name', 'near', 'neck', 'need', 'nest', 'nick', 'nock', 'nose', 'note', 'nuke', 'numb', 'obey',
-    'ogle',
-    'okay',
-    'omen',
-    'omit',
-    'ooze',
-    'open',
-    'oust',
-    'pace',
-    'pack',
-    'page',
-    'pain',
-    'pair',
-    'palm',
-    'pant',
-    'pare',
-    'park',
-    'part',
-    'pass',
-    'pave',
-    'pawn',
-    'peak',
-    'peal',
-    'peck',
-    'peek',
-    'peel',
-    'peep',
-    'peer',
-    'perk',
-    'pick',
-    'pile',
-    'pine',
-    'plan',
-    'plat',
-    'play',
-    'plod',
-    'plop',
+    const wordsArr = ['abet', 'abut', 'ache', 'alit', 'ante', 'arch', 'aver', 'avow', 'bach', 'back', 'bade', 'bail', 'bait', 'bake', 'bale', 'balk', 'ball', 'band', 'bang', 'bank', 'barb', 'bard', 'bare', 'barf', 'bark', 'base', 'bash', 'bask', 'bate', 'bawl', 'bead', 'beam', 'bean', 'bear', 'beat', 'beef', 'been', 'beep', 'bell', 'belt', 'bend', 'bent', 'bias', 'bide', 'biff', 'bike', 'bilk', 'bill', 'bind', 'bird', 'birl', 'birr', 'bite', 'bitt', 'blab', 'blat', 'bled', 'blew', 'blob', 'blot', 'blow', 'blub', 'blue', 'blur', 'boat', 'bode', 'body', 'boil', 'bolt', 'bomb', 'bond', 'bone', 'bong', 'bonk', 'book', 'boom', 'boot', 'bore', 'born', 'boss', 'bowl', 'brag', 'bray', 'bred', 'brew', 'brim', 'buck', 'buff', 'bulk', 'bull', 'bump', 'bung', 'bunk', 'bunt', 'buoy', 'burl', 'burn', 'burp', 'burr', 'bury', 'bush', 'busk', 'buss', 'bust', 'busy', 'butt', 'buzz', 'caca', 'cage', 'cake', 'calk', 'call', 'calm', 'came', 'camp', 'cane', 'cant', 'card', 'care', 'cart', 'case', 'cash', 'cast', 'cave', 'cede', 'cere', 'chap', 'char', 'chat', 'chaw', 'chid', 'chin', 'chip', 'chop', 'chug', 'chum', 'cite', 'clad', 'clam', 'clap', 'claw', 'clew', 'clip', 'clog', 'clop', 'clot', 'cloy', 'club', 'clue', 'coal', 'coat', 'coax', 'cock', 'code', 'coif', 'coil', 'coin', 'coke', 'comb', 'come', 'comp', 'cone', 'conk', 'cook', 'cool', 'coop', 'cope', 'copy', 'cord', 'core', 'cork', 'corn', 'cosh', 'cost', 'cowl', 'crab', 'cram', 'crap', 'crew', 'crib', 'crop', 'crow', 'cube', 'cuff', 'cull', 'curb', 'cure', 'curl', 'cuss', 'dado', 'damn', 'damp', 'dang', 'dare', 'darn', 'dart', 'dash', 'date', 'daub', 'dawn', 'daze', 'deal', 'deck', 'deed', 'deem', 'defy', 'deke', 'demo', 'dent', 'deny', 'dial', 'dice', 'died', 'diet', 'dike', 'dine', 'ding', 'disc', 'dish', 'disk', 'diss', 'dive', 'dock', 'doff', 'dole', 'done', 'doom', 'dope', 'doss', 'dote', 'dove', 'down', 'doze', 'drag', 'draw', 'drew', 'drip', 'drop', 'drub', 'drug', 'drum', 'duck', 'duel', 'dull', 'dump', 'dung', 'dunk', 'dupe', 'dusk', 'dust', 'earn', 'ease', 'echo', 'edge', 'edit', 'emit', 'envy', 'espy', 'etch', 'even', 'exit', 'face', 'fade', 'fail', 'fake', 'fall', 'fare', 'farm', 'fart', 'fast', 'fate', 'fawn', 'faze', 'fear', 'feed', 'feel', 'fell', 'felt', 'fend', 'fess', 'fete', 'feud', 'file', 'fill', 'film', 'find', 'fine', 'fink', 'fire', 'firm', 'fish', 'fist', 'fizz', 'flag', 'flap', 'flat', 'flaw', 'flay', 'fled', 'flee', 'flew', 'flex', 'flip', 'flit', 'flog', 'flop', 'flow', 'flub', 'flux', 'foal', 'foam', 'foil', 'fold', 'fond', 'fool', 'foot', 'ford', 'fork', 'form', 'foul', 'fowl', 'frag', 'frap', 'fray', 'free', 'fret', 'frit', 'fuel', 'full', 'fume', 'fund', 'funk', 'furl', 'fuse', 'fuss', 'futz', 'gain', 'gait', 'gall', 'game', 'gang', 'gaol', 'gape', 'garb', 'gash', 'gasp', 'gate', 'gave', 'gawk', 'gawp', 'gaze', 'gear', 'geld', 'gibe', 'gift', 'gild', 'gimp', 'gird', 'give', 'glom', 'glow', 'glue', 'glug', 'glut', 'gnaw', 'goad', 'golf', 'gone', 'gong', 'goof', 'gore', 'gown', 'grab', 'gray', 'grew','grey', 'grid', 'grin', 'grip', 'grit', 'grow', 'grub', 'gull', 'gulp', 'gush', 'gust', 'gybe', 'hack', 'hail', 'hale', 'halt', 'hand', 'hang', 'hare', 'hark', 'harm', 'harp', 'hash', 'hasp', 'hast', 'hate', 'hath', 'haul', 'have', 'hawk', 'haze', 'head', 'heal', 'heap', 'hear', 'heat', 'heed', 'heel', 'heft', 'held', 'helm', 'help', 'herd', 'hewn', 'hide', 'hike', 'hill', 'hint', 'hire', 'hiss', 'hive', 'hoax', 'hock', 'hold', 'hole', 'home', 'hone', 'honk', 'hood', 'hoof', 'hook', 'hoop', 'hoot', 'hope', 'horn', 'hose', 'host', 'hove', 'howl', 'huff', 'hulk', 'hull', 'hump', 'hung', 'hunt', 'hurl', 'hurt', 'hush', 'husk', 'hymn', 'hype', 'idle', 'inch', 'iron', 'itch', 'jack', 'jade', 'jail', 'jape', 'jazz', 'jeer', 'jell', 'jerk', 'jest', 'jibe', 'jilt', 'jinx', 'jive', 'join', 'joke', 'jolt', 'josh', 'juke', 'jump', 'junk', 'kayo', 'keel', 'keen', 'keep', 'kept', 'kern', 'kick', 'kill', 'kink', 'kiss', 'kite', 'knap', 'knew', 'knit', 'knot', 'know', 'lace', 'lack', 'laid', 'lain', 'lamb', 'lame', 'land', 'lard', 'lark', 'lash', 'last', 'laud', 'lave', 'laze', 'lead', 'leaf', 'leak', 'lean', 'leap', 'leer', 'left', 'lend', 'lent', 'levy', 'lick', 'lift', 'like', 'lilt', 'lime', 'limp', 'line', 'link', 'lisp', 'list', 'live', 'load', 'loaf', 'loan', 'lock', 'loft', 'loll', 'long', 'look', 'loom', 'loop', 'loot', 'lope', 'lord', 'lose', 'lost', 'lour', 'love', 'lube', 'luck', 'luff', 'luge', 'lull', 'lump', 'lure', 'lurk', 'lust', 'made', 'mail', 'maim', 'make', 'mark', 'mask', 'mate', 'maul', 'meet', 'meld', 'melt', 'mend', 'meow', 'mess', 'miff', 'milk', 'mime', 'mind', 'mine', 'miss', 'moan', 'mock', 'moor', 'moot', 'mope', 'move', 'muck', 'muff', 'muse', 'mush', 'must', 'mute', 'nail', 'name', 'near', 'neck', 'need', 'nest', 'nick', 'nock', 'nose', 'note', 'nuke', 'numb', 'obey', 'ogle', 'okay', 'omen', 'omit', 'ooze', 'open', 'oust', 'pace', 'pack', 'page', 'pain', 'pair', 'palm', 'pant', 'pare', 'park', 'part', 'pass', 'pave', 'pawn', 'peak', 'peal', 'peck', 'peek', 'peel', 'peep', 'peer', 'perk', 'pick', 'pile', 'pine', 'plan', 'plat', 'play', 'plod', 'plop',
     'plot',
     'plow',
     'plug',
@@ -418,10 +382,10 @@ document.addEventListener("DOMContentLoaded", () => {
             if (elem.textContent === letter) {
                 let oldColor = elem.style.backgroundColor
                 console.log(oldColor)
-                if (oldColor === 'green'){
+                if (oldColor === "rgb(83, 141, 78)"){
                     return
                 }
-                if (oldColor === 'yellow' && color !== 'green') {
+                if (oldColor === "rgb(181, 159, 59)" && color !== "rgb(83, 141, 78)") {
                     return
                 }
                 elem.style.backgroundColor = color
@@ -460,7 +424,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const isCorrectLetter = word.includes(letter)
 
         if (!isCorrectLetter) {
-            color === "gray";
+            color === "rgb(58, 58, 60)";
             return "rgb(58, 58, 60)"
         }
 
@@ -468,12 +432,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const isCorrectPosition = letter === letterInThatPosition
 
         if (isCorrectPosition) {
-            color === "green";
+            color === "rgb(83, 141, 78)";
             return "rgb(83, 141, 78)"
         }
 
-        color === "yellow";
-        // square.style.backgroundColor = color;
+        color === "rgb(181, 159, 59)";
+        square.style.backgroundColor = color;
         colorKeyboard(letter, color);
         return "rgb(181, 159, 59)"
     }
