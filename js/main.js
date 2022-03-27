@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // import { wordsArr } from "js/fiveLetterArr.js"
 
     createSquares();
     let word;
